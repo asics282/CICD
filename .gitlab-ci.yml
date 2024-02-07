@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+  - deploy
+
+job_build:
+  stage: build
+  script:
+    - echo "Building"
+
+job_test:
+  stage: test
+  script:
+    - echo "Testing"
+
+job_deploy:
+  stage: deploy
+  script:
+    - echo "Deploying"
+  artifacts:
+    paths:
+      - my_artifact.txt
+    expire_in: 1 week
